@@ -21,8 +21,8 @@ if (MSVC)
     SET(PY_COMMON_COMPILER_FLAG "/Zi /Od /Ob0")
     SET(PY_COMMON_LINKER_FLAG "/debug /INCREMENTAL")
 else()
-    SET(PY_COMMON_COMPILER_FLAG "-g -Xclang -gcodeview -O0")
-    SET(PY_COMMON_LINKER_FLAG "-fPIC")
+    SET(PY_COMMON_COMPILER_FLAG "-fPIC -g -Xclang -gcodeview -O0")
+    SET(PY_COMMON_LINKER_FLAG "")
 endif()
 
 # Add new build types
